@@ -6,6 +6,7 @@ body {
     /* background-color: #53535367; */
 }
 
+/* Nav for Main Page */
 nav ul {
     text-decoration: none;
     list-style: none;
@@ -32,4 +33,108 @@ li a {
 
 li a:hover {
     transform: scale(1.2);
+}
+
+/* Container for heading and main-div */
+.container {
+    display: flex;
+    padding: 30px;
+    gap: 2em;
+    background: #888686;
+    /* width: 100%; */
+}
+
+/* heading div */
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: #333 1px 1px 10px 1px;
+    padding: 50px;
+    background: #d6d6d6;
+    border-radius: 4em 0px 0px 4em;
+    width: 50%;
+}
+.heading h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    font-family: fantasy;
+    /* letter-spacing: 0.2em; */
+}
+.heading p {
+    color: #666;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* main-div which holds Form */
+.main-div {
+    border-radius: 0px 4em 4em 0px;
+    background: #d6d6d6;
+    padding: 50px;
+    width: 50%;
+    box-shadow: #333 1px 1px 10px 1px;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 80px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 100%;
+    /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.404); */
+    animation-name: floatingForm;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.label {
+    margin-bottom: 10px;
+    color: burlywood;
+    font-size: 13px;
+}
+
+input {
+    /* width: 100%; */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+input:active,
+input:focus {
+    transform: scale(1.1);
+    outline: none;
+    border-color: #777;
+    box-shadow: #333 0px 0px 8px;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button {
+    width: 200px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    box-shadow: #333 0 10px 20px;
 }
