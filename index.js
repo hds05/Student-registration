@@ -78,6 +78,9 @@ contactInput.maxLength = 10;
 contactInput.placeholder = 'Enter Contact Number';
 contactInput.classList.add('input');
 contactInput.required = true;
+contactInput.pattern = '\\d{10}';
+contactInput.title = 'Contact number must be exactly 10 digits';
+contactInput.inputMode = 'numeric';
 
 // This will ensure that there should be only numbers.. \D- means anything that is not a digit, globaly replace it with ''(nothing)
 contactInput.addEventListener('input', () => {
