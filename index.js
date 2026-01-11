@@ -40,6 +40,11 @@ nameInput.classList.add('input');
 nameInput.value='';
 nameInput.required = true;
 
+// This will ensure that there should be only characters.. \d- means anything that is not a character, globaly replace it with ''(nothing)
+nameInput.addEventListener('input', () => {
+    nameInput.value = nameInput.value.replace(/\d/g, '');
+});
+
 // ID Field
 const idLabel = document.createElement('label');
 idLabel.classList.add('label');
@@ -73,6 +78,11 @@ contactInput.maxLength = 10;
 contactInput.placeholder = 'Enter Contact Number';
 contactInput.classList.add('input');
 contactInput.required = true;
+
+// This will ensure that there should be only numbers.. \D- means anything that is not a digit, globaly replace it with ''(nothing)
+contactInput.addEventListener('input', () => {
+    contactInput.value = contactInput.value.replace(/\D/g, '');
+});
 
 // Appending elements to the form
 form.appendChild(labelName);
