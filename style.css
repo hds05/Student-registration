@@ -400,5 +400,14 @@ tr:nth-child(odd){
     .tableData{
         font-size: 10px;
     }
+    .actionBtn{
+        display: flex;
+    }
+    .editBtn{
+       font-size: 8px;
+    }
+    .deleteBtn{
+        font-size: 8px;
+    }
 
 }

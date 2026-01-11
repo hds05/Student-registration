@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contactTd.textContent = student.contact;
         
         const actionTd = document.createElement('td')
-        actionTd.classList.add('tableData')
+        actionTd.classList.add('tableData','actionBtn')
 
         const editBtn = document.createElement('button')
         editBtn.innerText = '✏️'
