@@ -26,8 +26,6 @@ document.body.appendChild(containerBox)
 
 // Creating the form
 const form = document.createElement('form');
-// form.method = 'post';
-// form.action = '/Registere';
 
 // Creating input fields and labels
 // Name Field
@@ -105,25 +103,12 @@ buttonDiv.appendChild(button);
 main.appendChild(form);
 
 // After form submit
-// form.addEventListener('submit', (a)=>{
-//     a.preventDefault();
 
-//     const studentData = {
-//         Name : nameInput.value,
-//         id: idInput.value,
-//         email: emailInput.value,
-//         contact: contactInput.value
-//     }
-
-//     localStorage.setItem('studentData', JSON.stringify(studentData))
-//     console.log(localStorage.getItem("studentData"))
-
-// })
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const studentData = {
-        Name: nameInput.value,
+        name: nameInput.value,
         id: idInput.value,
         email: emailInput.value,
         contact: contactInput.value
@@ -138,13 +123,8 @@ form.addEventListener('submit', (e) => {
     // Save updated array
     localStorage.setItem('students', JSON.stringify(students));
 
-    // Check in console
-    console.log(localStorage.getItem('students'));
-
     // Optional: reset form
     form.reset();
 
-    // Update table or display
-    // displayStudents();
 });
 
